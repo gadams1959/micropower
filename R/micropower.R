@@ -386,7 +386,7 @@ calcOmega2 <- function(dm) {
 #' PERMANOVA(calcUJstudy(simStudy()))
 PERMANOVA <- function(dm) {
   dm <- groupNames(dm)
-  dm <- adonis(as.dist(dm)~colnames(dm),permutations=1000)
+  dm <- adonis2(as.dist(dm)~colnames(dm),permutations=1000)
   return(dm)
 }
 
